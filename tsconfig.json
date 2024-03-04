@@ -1,0 +1,36 @@
+{
+  "compilerOptions": {
+    "target": "ES6",   
+    "module": "commonjs",      
+    "noImplicitAny": true,
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "outDir": "dist",
+    "baseUrl": "./src",
+    "experimentalDecorators": true,
+    "esModuleInterop": true,                             
+    "forceConsistentCasingInFileNames": true,            
+  },
+  "paths": {
+    "@controllers/*": [
+        "./controllers/*"
+    ]
+    ,"@models/*": [
+      "./models/*"
+    ],
+    "@common/*": [
+        "./common/*"
+    ],
+    "@utils/*": [
+      "./utils/*"
+  ],
+    "@router/*": [
+        "./router/*"
+    ],
+    "*": [
+        "node_modules/*"
+    ]
+  },
+  "include": [
+    "src/**/*.ts"],
+}
