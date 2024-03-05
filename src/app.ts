@@ -1,7 +1,7 @@
 import express from 'express';
 import createError from 'http-errors'
 
-import indexRouter from './routes/index'
+import indexRouter from './routes/page'
 
 var app = express();
 
