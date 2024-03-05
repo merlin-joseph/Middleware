@@ -1,13 +1,10 @@
 
 
 import axios from 'axios'
-import Qs from 'qs';
-
-import {API_BASE_URL,CONTENTFUL_SPACEID,
-  CONTENTFUL_ENVIRONMENT,CONTENTFUL_ACCESS_TOKEN} from '../common/constants'
+import {API_BASE_URL,CONTENTFUL_SPACEID,CONTENTFUL_ENVIRONMENT,CONTENTFUL_ACCESS_TOKEN} from '../common/constants'
 
 
-export const axiosInstance = axios.create({
+  export const axiosInstance = axios.create({
     baseURL: `${API_BASE_URL}/spaces/${CONTENTFUL_SPACEID}/environments/${CONTENTFUL_ENVIRONMENT}`
   });
 

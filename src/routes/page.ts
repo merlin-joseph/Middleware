@@ -1,7 +1,8 @@
 
 import express from 'express';
+import {axiosInstance} from '../utils/axios';
 var router = express.Router();
-import {axiosInstance} from '../utils/axios'
+
 
 
 //get page  entry with slug
@@ -25,7 +26,6 @@ async function fetchData(slug:string) {
   }
   try {
     const response = await axiosInstance.get('/entries', {params});
-    console.log(response)
     return response.data;
   } catch (error:any) {
     return {
@@ -33,6 +33,5 @@ async function fetchData(slug:string) {
       status : error.response.status};
     }
 }
-
 
 export default router

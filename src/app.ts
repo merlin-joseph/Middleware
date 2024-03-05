@@ -1,13 +1,13 @@
 import express from 'express';
 import createError from 'http-errors'
 
-import indexRouter from './routes/page'
+import pageRouter from './routes/page'
 
 var app = express();
 
 app.use(express.json());
 
-app.use('/', indexRouter);
+app.use('/', pageRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
