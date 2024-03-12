@@ -1,12 +1,13 @@
 
 import express from 'express';
 import {axiosInstance} from '../utils/axios';
+import {isAuthenticated} from '../middlewares/auth'
 var router = express.Router();
 
 
 
 //get page  entry with slug
-router.get('/page/:slug', async function(req, res, next) {
+router.get('/:slug', isAuthenticated,async (req, res, next) =>{
   try {
     const data = await fetchData(req.params.slug);
     res.json(data);

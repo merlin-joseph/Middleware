@@ -2,12 +2,15 @@ import express from 'express';
 import createError from 'http-errors'
 
 import pageRouter from './routes/page'
+import authRouter from './routes/auth'
 
 var app = express();
 
 app.use(express.json());
 
-app.use('/', pageRouter);
+app.use('/page', pageRouter);
+app.use('/', authRouter);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
